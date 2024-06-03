@@ -1,5 +1,56 @@
 <html>
 <head>
+
+<script>
+alert("厭惡香蕉者請迴避");
+</script>
+
+<script>
+function myFunction() {
+document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+
+
+<div style="background-color:#D94A38;width:90px;height:20px;padding:40px;">要幾根香蕉?</div>
+<p id="counter">0</p>
+<script>
+const x = document.querySelector("div");
+let number = 0;
+x.addEventListener("click", function(){
+number=number+1
+document.getElementById("counter").innerHTML = number;
+});
+</script>
+
+
+
+
+<p>1到10你有多愛香蕉:</p>
+<input id="demo1" type="text">
+<button type="button" onclick="test()">Test Input</button>
+<p id="info"></p>
+<script>
+function test() {
+let message = document.getElementById("info");
+message.innerHTML="";
+let x = document.getElementById("demo1").value;
+try {
+if(x == "") throw "empty";
+if(isNaN(x)) throw "輸入錯了";
+x = Number(x);
+if(x < 9) throw "太低瞜";
+if(x == 10) throw "讚讚讚";
+if(x > 10) throw "太棒了";
+}
+catch(err) {
+message.innerHTML = "你" + err;
+}
+finally {
+document.getElementById("demo1").value = "";
+}
+}</script>
+
 <style>
 
 #header {height:90px;background-image: linear-gradient(yellow, red, yellow, red, yellow);padding:1em}
@@ -38,6 +89,7 @@ visibility: hidden;}
 </style>
 </head>
 <body>
+
 <div id="header">
 <h1>超大香蕉</h1>
 </div>
@@ -46,6 +98,16 @@ visibility: hidden;}
 <p><a href="https://pixabay.com/images/search/bananas/" target="_blank">free banana images</a></p>
 <p>這裡可以找到免費的香蕉圖片</p>
 </div>
+<p id="demo">我要變大!!</p>
+<button type="button" onclick=
+
+"document.querySelector('#demo').style.fontSize='50px'">按我變大!</button>
+
+<button type="button" onclick=
+
+"document.querySelector('#demo').style.fontSize='5px'">按我變小!</button>
+
+
 <h1>wow!</h1>
 <h1>免費的香蕉圖片!</h1>
 <h1>超大的香蕉手槍!</h1>
@@ -65,9 +127,20 @@ visibility: hidden;}
 <div id="footer">
 <h1>謝謝大家</h1>
 </div>
+
+
+
+
+
+
+
+
+
+
 </body>
 
 
 <foot>
 
 </foot>
+</html>
